@@ -2,6 +2,10 @@
 
 This module provides comprehensive functionality for error handling and logging within an embedded system. It includes libraries for simplifying file names, implementing circular buffers, and handling errors in both bare-metal and FreeRTOS environments.
 
+## Overview
+
+When debugging embedded systems, errors often arise that need to be captured and logged for analysis and troubleshooting. The error handling module facilitates this process by providing mechanisms for capturing error information, simplifying file names to conserve memory, and storing errors in circular buffers for later retrieval and analysis.
+
 ## Simplify File Name Library
 
 The `simplify_file_name` library includes a function to simplify file names if their length exceeds a certain limit.
@@ -89,6 +93,8 @@ void error_task(void *pvParameters);
 #### Description
 
 The FreeRTOS implementation of the `error_handler` function operates within a FreeRTOS task, allowing for error handling in multitasking environments. It follows a similar approach to the bare metal version but runs asynchronously, ensuring minimal impact on system performance.
+
+---
 
 ### Usage
 
